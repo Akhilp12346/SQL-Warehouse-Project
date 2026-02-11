@@ -9,6 +9,21 @@ Script Purpose:
 ===============================================================================
 */
 
+/*
+==============================================================================
+Stored Procedure : Load broze layer (Source -> Broze layer)
+===============================================================================
+This Stored Procedure Load Data into the 'bronze' Shcema from external .csv files.
+It Performs the following actions.
+-- Truncate the bronze table before loading data
+-- uses BULK INSERT command to load data from csv files to bronze tables
+
+Parameters:
+None 
+--This Stored Procedure does'nt store and parameters or return any value.
+
+USE Example: EXEC bronze.load_bronze;
+ 
 
 CREATE OR ALTER PROCEDURE bronze.load_bronze AS
 BEGIN
